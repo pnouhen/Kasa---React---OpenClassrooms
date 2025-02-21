@@ -1,0 +1,7 @@
+@mixin header-index{
+    width: 86%;
+    margin: auto;
+    @media screen and (max-width: 768px) {
+        width: 89%;
+      }
+}
