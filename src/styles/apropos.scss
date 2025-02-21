@@ -1,0 +1,53 @@
+@import "./mixin";
+@import "./variables";
+
+article {
+    @include container;
+  width: 71%;
+  margin: auto;
+  .filter {
+    box-sizing: border-box;
+    height: 52px;
+    margin-top: $top-margin;
+    border-radius: 5px;
+    padding: 10px 0px 10px 15px;
+    background: rgba(255, 96, 96, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 768px) {
+        height: 30px;
+      }
+    h2 {
+      color: rgba(255, 255, 255, 1);
+      font-weight: 700;
+      font-size: 24px;
+      @media screen and (max-width: 768px) {
+        font-size: 13px;
+      }
+    }
+    .fa-solid {
+      width: 32px;
+      height: 32px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      @media screen and (max-width: 768px) {
+        font-size: 16px;
+      }
+    }
+  }
+  p {
+    font-size: 18px;
+    background: rgba(246, 246, 246, 0.45);
+    padding: 10px 20px 10px 15px;
+    margin: 0;
+    transition: opacity 200ms forwards;
+    @media screen and (max-width: 768px) {
+        font-size: 11px;
+      }
+  }
+
+}

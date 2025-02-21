@@ -2,7 +2,7 @@
 @import "./mixin";
 
 header {
-  @include header-index;
+  @include container;
   margin-top: $top-margin;
   display: flex;
   justify-content: space-between;
