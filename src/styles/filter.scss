@@ -1,14 +1,14 @@
 @import "./mixin";
 @import "./variables";
 
-article {
+.filter {
     @include container;
   width: 71%;
   margin: auto;
-  .filter {
+  margin-top: $top-margin;
+  .name {
     box-sizing: border-box;
     height: 52px;
-    margin-top: $top-margin;
     border-radius: 5px;
     padding: 10px 0px 10px 15px;
     background: rgba(255, 96, 96, 1);

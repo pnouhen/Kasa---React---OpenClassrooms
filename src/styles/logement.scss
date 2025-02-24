@@ -1,0 +1,70 @@
+@import "./variables";
+@import "./mixin";
+
+.carrousel {
+  position: relative;
+  @include container;
+  margin-top: $top-margin;
+  height: 415px;
+  border-radius: $radius-border;
+  #picture {
+    width: 100%;
+    height: 100%;
+  }
+  #arrow-left,
+  #arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  #arrow-left {
+    left: 0;
+  }
+  #arrow-right {
+    right: 0;
+  }
+}
+section {
+  @include container;
+  margin-top: $top-margin;
+  display: flex;
+  justify-content: space-between;
+  .title-tag {
+    h1 {
+      font-weight: 500;
+      font-size: 36px;
+      color: rgba(255, 96, 96, 1);
+      margin: 0;
+    }
+    p {
+      margin: 10px 0 0 0;
+      font-weight: 500;
+      font-size: 18px;
+    }
+    ul {
+      display: flex;
+      list-style-type: none;
+        padding: 0;
+        gap: 10px;
+      li {
+        width: 115px;
+        height: 25px;
+        background: rgba(255, 96, 96, 1);
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+.details{
+    margin-top: 15px;
+    display: flex;
+    gap: 56px;
+    .filter{
+        margin-top: 0;
+    }
+}

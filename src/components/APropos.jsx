@@ -1,11 +1,11 @@
-import "../styles/apropos.scss";
+import "../styles/filter.scss";
 import DropDown from "../function/Dropdown";
 export default function APropos() {
   DropDown()
   return (
     <>
-      <article>
-        <div className="filter">
+      <article className="filter">
+        <div className="name">
           <h2>Fiabilité</h2>
           <i className="fa-solid fa-chevron-up"></i>
         </div>
