@@ -20,16 +20,16 @@ export default function Logement() {
       </article>
       <article className="host-rating">
         <div className="host">
-            <p>Alexandre Dumas</p>
+            <p>Alexandre <br></br> Dumas</p>
             <img>
             </img>
         </div>
         <div className="rating">
-        <i className="fa-solid fa-star"></i>
-        <i className="fa-solid fa-star"></i>
-        <i className="fa-solid fa-star"></i>
-        <i className="fa-solid fa-star"></i>
-        <i className="fa-solid fa-star"></i>
+        <i id="star-1" className="fa-solid fa-star"></i>
+        <i id="star-2" className="fa-solid fa-star"></i>
+        <i id="star-3" className="fa-solid fa-star"></i>
+        <i id="star-4" className="fa-solid fa-star"></i>
+        <i id="star-5" className="fa-solid fa-star"></i>
         </div>
       </article>
       </section>
@@ -37,7 +37,7 @@ export default function Logement() {
         <article className="filter">
         <div className="name">
           <h2>Description</h2>
-          <i className="fa-solid fa-chevron-up"></i>
+          <i className="fa-solid fa-chevron-down"></i>
         </div>
         <p>
           La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
@@ -48,7 +48,7 @@ export default function Logement() {
       <article className="filter">
       <div className="name">
           <h2>Equipements</h2>
-          <i className="fa-solid fa-chevron-up"></i>
+          <i className="fa-solid fa-chevron-down"></i>
         </div>
         <p>
           Nos équipes se tiennent à votre disposition pour vous fournir une

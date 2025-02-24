@@ -7,7 +7,7 @@ export default function APropos() {
       <article className="filter">
         <div className="name">
           <h2>Fiabilité</h2>
-          <i className="fa-solid fa-chevron-up"></i>
+          <i className="fa-solid fa-chevron-down"></i>
         </div>
         <p>
           Les annonces postées sur Kasa garantissent une fiabilité totale. Les
@@ -18,7 +18,7 @@ export default function APropos() {
       <article>
         <div className="filter">
           <h2>Respect</h2>
-          <i className="fa-solid fa-chevron-up"></i>
+          <i className="fa-solid fa-chevron-down"></i>
         </div>
         <p>
           La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
@@ -29,7 +29,7 @@ export default function APropos() {
       <article>
         <div className="filter">
           <h2>Service</h2>
-          <i className="fa-solid fa-chevron-up"></i>
+          <i className="fa-solid fa-chevron-down"></i>
         </div>
         <p>
           Nos équipes se tiennent à votre disposition pour vous fournir une
@@ -40,7 +40,7 @@ export default function APropos() {
       <article>
         <div className="filter">
           <h2>Sécurité</h2>
-          <i className="fa-solid fa-chevron-up"></i>
+          <i className="fa-solid fa-chevron-down"></i>
         </div>
         <p>
           La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que
