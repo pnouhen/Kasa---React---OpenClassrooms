@@ -1,21 +1,38 @@
 import "./styles/body.scss";
-import Header from "./components/Header.jsx";
-// import Accueil from './components/Accueil.jsx'
+import Accueil from "./components/Accueil.jsx";
 import APropos from "./components/APropos.jsx";
-// import Logement from "./components/Logement.jsx";
-// import Error404 from "./components/Error404.jsx";
-import Footer from "./components/Footer.jsx";
+import Error404 from "./components/Error404.jsx";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+// Définition des routes dans le router
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <div>        
+        <Accueil />
+      </div>
+    ),
+  },
+  {
+    path: "/a-propos",
+    element: (
+      <div>        
+        <APropos />
+      </div>
+    ),
+  },
+  {
+    path: "*",
+    element: <div>      
+        <Error404 />
+    </div>,
+  },
+]);
 
 function App() {
   return (
-    <>
-      <Header />
-      {/* <Accueil /> */}
-      <APropos />
-      {/* <Logement /> */}
-      {/* <Error404 /> */}
-      <Footer />
-    </>
+    <RouterProvider router={router} />
   );
 }
 
