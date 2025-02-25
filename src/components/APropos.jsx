@@ -1,7 +1,13 @@
+import Banner from "./Banner";
+import img from "../assets/img/A-Propos.webp";
 import Filter from "./Filter";
 export default function APropos() {
   return (
     <>
+    <Banner
+            picture={img}
+            descriptionPicture="Bannière de l'A Propos"
+          ></Banner>
       <Filter title="Fiabilité" content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les
           photos sont conformes aux logements, et toutes les informations sont
           régulièrement vérifiées par nos équipes."></Filter>

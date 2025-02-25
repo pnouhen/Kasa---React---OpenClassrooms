@@ -1,34 +1,15 @@
 import "../styles/accueil.scss";
-
+import Banner from "./Banner";
+import img from "../assets/img/accueil.webp";
 export default function Accueil() {
   return (
     <>
-      <section>
-      <article>
-        <img src="./src/assets/img/card.png" alt="Picture article"></img>
-        <h2>Titre de la <br></br> location</h2>
-      </article>
-      <article>
-        <img src="./src/assets/img/card.png" alt="Picture article"></img>
-        <h2>Titre de la <br></br> location</h2>
-      </article>
-      <article>
-        <img src="./src/assets/img/card.png" alt="Picture article"></img>
-        <h2>Titre de la <br></br> location</h2>
-      </article>
-      <article>
-        <img src="./src/assets/img/card.png" alt="Picture article"></img>
-        <h2>Titre de la <br></br> location</h2>
-      </article>
-      <article>
-        <img src="./src/assets/img/card.png" alt="Picture article"></img>
-        <h2>Titre de la <br></br> location</h2>
-      </article>
-      <article>
-        <img src="./src/assets/img/card.png" alt="Picture article"></img>
-        <h2>Titre de la <br></br> location</h2>
-      </article>
-      </section>
+      <Banner
+        picture={img}
+        descriptionPicture="Bannière de l'accueil"
+        title="Chez vous, partout et ailleurs"
+      ></Banner>
+      <section></section>
     </>
   );
 }
