@@ -30,6 +30,7 @@ a{
     font-size: 18px;
     margin-bottom: $margin-desktop;
     text-decoration: underline;
+    color: black;
     @media screen and (max-width:1024px) {
         font-size: 14px;
         margin-bottom: $margin-tablette;

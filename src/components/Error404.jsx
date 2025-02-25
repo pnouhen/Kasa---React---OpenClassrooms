@@ -1,5 +1,6 @@
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
+import { NavLink } from "react-router-dom";
 import "../styles/error404.scss";
 
 export default function Logement() {
@@ -7,8 +8,12 @@ export default function Logement() {
     <>
       <Header />
       <h1>404</h1>
-      <p className="descriptionError">Oups! La page que vous demandez n&apos;existe pas.</p>
-      <a>Retourner sur la page d’accueil</a>
+      <p className="descriptionError">
+        Oups! La page que vous demandez n&apos;existe pas.
+      </p>
+      <NavLink to="/">
+        Retourner sur la page d’accueil
+      </NavLink>
       <Footer />
     </>
   );

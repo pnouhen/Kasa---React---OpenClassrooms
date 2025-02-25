@@ -16,7 +16,7 @@ export default function Filter({ title, content }) {
           }}
         ></i>
       </div>
-      <p className={open ? "" : "close"}>{content}</p>
+      <p className={open ? "open" : ""}>{content}</p>
     </article>
   );
 }
