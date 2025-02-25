@@ -2,7 +2,7 @@
 @import "./variables";
 
 .filter {
-    @include container;
+  @include container;
   width: 71%;
   margin: auto;
   margin-top: $top-margin;
@@ -16,8 +16,8 @@
     justify-content: space-between;
     align-items: center;
     @media screen and (max-width: 768px) {
-        height: 30px;
-      }
+      height: 30px;
+    }
     h2 {
       color: rgba(255, 255, 255, 1);
       font-weight: 700;
@@ -26,7 +26,7 @@
         font-size: 13px;
       }
     }
-    .fa-solid {
+    i {
       width: 32px;
       height: 32px;
       color: white;
@@ -34,20 +34,28 @@
       justify-content: center;
       align-items: center;
       font-size: 24px;
+      transition: transform 400ms ease;
       @media screen and (max-width: 768px) {
         font-size: 16px;
       }
+    }
+    .rotate {
+      transform: rotate(-180deg);
     }
   }
   p {
     font-size: 18px;
     background: rgba(246, 246, 246, 0.45);
-    padding: 10px 20px 10px 15px;
+    padding: 20px;
+    line-height: 25.67px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
     margin: 0;
-    transition: opacity 200ms forwards;
     @media screen and (max-width: 768px) {
-        font-size: 11px;
-      }
+      font-size: 11px;
+    }
   }
-
+  .close {
+    display: none;
+  }
 }
