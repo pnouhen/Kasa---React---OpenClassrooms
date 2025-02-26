@@ -6,8 +6,8 @@
   width: 71%;
   margin: auto;
   margin-top: $top-margin;
-  .name {
   position: relative;
+  .name {
     box-sizing: border-box;
     height: 52px;
     border-radius: 5px;
@@ -47,46 +47,25 @@
   p {
     position: absolute;
     z-index: -1;
-    background: rgba(246, 246, 246, 0.45);
+    opacity: 0;
+    transform: translateY(-50px);
     padding: 20px;
+    background: rgba(246, 246, 246, 0.45);
     line-height: 25.67px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
     margin: 0;
     font-size: 18px;
     text-align: left;
-    transform: translateY(-20px);
-    opacity: 0;
-    max-height: 0;
-    animation: closeFilter 400ms forwards;
-  }
-  @keyframes closeFilter{
-    from{
-    transform: translateY(0);
-    opacity: 1;
-    max-height: 1000px;
-    position: relative;
-    }
-    to{
+    overflow: hidden;
+    transition: all 200ms ease;
+    &.open {
       position: relative;
-    }
-  }
-  p.open {
-    animation: openFilter 400ms forwards;
-  }
-  @keyframes openFilter{
-    from{
-      position: relative;
-    }
-    to{
       transform: translateY(0);
-    opacity: 1;
-    max-height: 1000px;
-    position: relative;
+      opacity: 1;
     }
   }
-  
-    @media screen and (max-width: 768px) {
-      font-size: 11px;
-    }
+  @media screen and (max-width: 768px) {
+    font-size: 11px;
+  }
 }
