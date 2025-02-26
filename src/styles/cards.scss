@@ -1,9 +1,28 @@
-article {
+@import "./variables";
+@import "./mixin";
+
+section {
+  @include container;
+  box-sizing: border-box;
+  position: sticky;
+  margin-top: $top-margin;  
+  background: rgba(246, 246, 246, 1);
+  border-radius: $radius-border-banner-section;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 45px;
+  padding: 45px;
+  @media screen and (max-width: 768px) {
+    background-color: transparent;
+    padding: 0;
+  }
+  article {
     position: relative;
     width: 100%;
     max-width: 340px;
     height: 340px;
-    border-radius: 10px;
+    border-radius: $radius-border-cards-img;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -19,8 +38,11 @@ article {
       z-index: -1;
       width: 100%;
       height: 100%;
+      object-fit: cover;
+      border-radius: $radius-border-cards-img;
     }
     h2 {
+      margin: 0;
       font-weight: 700;
       font-size: 18px;
       line-height: 25.67px;
@@ -28,3 +50,4 @@ article {
       padding: $padding-title-card;
     }
   }
+}
