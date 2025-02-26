@@ -1,7 +1,7 @@
-import Header from "./Header.jsx";
-import Footer from "./Footer.jsx";
+import Header from "./../Structure/Header.jsx";
+import Footer from "./../Structure/Footer.jsx";
 import { NavLink } from "react-router-dom";
-import "../styles/error404.scss";
+import "./.././../styles/error404.scss";
 
 export default function Logement() {
   return (

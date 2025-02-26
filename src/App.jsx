@@ -1,17 +1,16 @@
 import "./styles/body.scss";
-import Accueil from "./components/Accueil.jsx";
-import APropos from "./components/APropos.jsx";
-import Error404 from "./components/Error404.jsx";
-import Logement from "./components/Logement.jsx";
+import Home from "./components/pages/Home.jsx";
+import About from "./components/pages/About.jsx";
+import Error404 from "./components/pages/Error404.jsx";
+import Accommodation from "./components/pages/Accommodation.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-// Définition des routes dans le router
 const router = createBrowserRouter([
   {
     path: "/",
     element: (
       <div>
-        <Accueil />
+        <Home />
       </div>
     ),
   },
@@ -19,7 +18,7 @@ const router = createBrowserRouter([
     path: "/a-propos",
     element: (
       <div>
-        <APropos />
+        <About />
       </div>
     ),
   },
@@ -27,7 +26,7 @@ const router = createBrowserRouter([
     path: "/logement/:id",
     element: (
       <div>
-        <Logement />
+        <Accommodation />
       </div>
     ),
   },

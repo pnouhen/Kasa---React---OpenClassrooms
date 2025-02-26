@@ -1,16 +1,16 @@
 @import "./variables";
 @import "./mixin";
 
-section {
+.section-cards {
   @include container;
   box-sizing: border-box;
   position: sticky;
-  margin-top: $top-margin;  
+  margin-top: $top-margin;
   background: rgba(246, 246, 246, 1);
   border-radius: $radius-border-20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 45px;
   padding: 45px;
   @media screen and (max-width: 768px) {
@@ -49,6 +49,7 @@ section {
       line-height: 25.67px;
       color: rgba(255, 255, 255, 1);
       padding: $padding-title-card;
+      text-decoration: none;
     }
   }
 }

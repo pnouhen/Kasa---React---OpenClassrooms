@@ -1,10 +1,10 @@
-import Header from "./Header.jsx";
-import Banner from "./Banner";
-import img from "../assets/img/A-Propos.webp";
-import Filter from "./Filter";
-import Footer from "./Footer.jsx";
+import Header from "./../Structure/Header.jsx";
+import Banner from "./../Common/Banner.jsx";
+import Filter from "./../Common/Filter.jsx";
+import Footer from "./../Structure/Footer.jsx";
+import img from "./.././../assets/img/A-Propos.webp";
 
-export default function APropos() {
+export default function About() {
   return (
     <>
       <Header />
