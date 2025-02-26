@@ -2,6 +2,7 @@ import "./styles/body.scss";
 import Accueil from "./components/Accueil.jsx";
 import APropos from "./components/APropos.jsx";
 import Error404 from "./components/Error404.jsx";
+import Logement from "./components/Logement.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // Définition des routes dans le router
@@ -9,7 +10,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <div>        
+      <div>
         <Accueil />
       </div>
     ),
@@ -17,23 +18,31 @@ const router = createBrowserRouter([
   {
     path: "/a-propos",
     element: (
-      <div>        
+      <div>
         <APropos />
       </div>
     ),
   },
   {
+    path: "/logement/:id",
+    element: (
+      <div>
+        <Logement />
+      </div>
+    ),
+  },
+  {
     path: "*",
-    element: <div>      
+    element: (
+      <div>
         <Error404 />
-    </div>,
+      </div>
+    ),
   },
 ]);
 
 function App() {
-  return (
-    <RouterProvider router={router} />
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

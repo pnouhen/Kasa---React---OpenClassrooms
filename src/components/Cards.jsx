@@ -1,30 +1,26 @@
-import PropTypes from "prop-types";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import GenerateData from "./GenerateData";
 import "./../styles/cards.scss";
-import { useState, useEffect } from "react";
 
-export default function GenerateCards() {
+export default function Cards() {
   const [data, setData] = useState(null);
-
-  useEffect(() => {
-    fetch("./../public/data/logement.json")
-      .then((response) => response.json())
-      .then((data) => setData(data))
-      .catch((error) => console.error("Erreur lors de la récupération des données :", error));
-  }, []); 
 
   return (
     <section>
-      {data.map((item) => (
-        <article key={item.id} className="card">
-          <img src={item.cover} alt={item.title} />
-          <h2>{item.title}</h2>
-        </article>
-      ))}
+      <GenerateData setData={setData} /> {/* Passe setData à GenerateData */}
+
+      {data ? (
+        data.map((item) => (
+            <NavLink to={`/Logement/${item.id}`} key={item.id}>
+            <img src={item.cover} alt={item.title} />
+            <h2>{item.title}</h2>
+            </NavLink>
+        ))
+      ) : (
+        <div>Chargement...</div> // Affiche "Chargement..." si les données ne sont pas encore disponibles
+      )}
     </section>
   );
 }
 
-GenerateCards.propTypes = {
-  cover: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-};

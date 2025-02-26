@@ -7,21 +7,22 @@ section {
   position: sticky;
   margin-top: $top-margin;  
   background: rgba(246, 246, 246, 1);
-  border-radius: $radius-border-banner-section;
+  border-radius: $radius-border-20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   gap: 45px;
   padding: 45px;
   @media screen and (max-width: 768px) {
     background-color: transparent;
     padding: 0;
   }
-  article {
+  a {
     position: relative;
     width: 100%;
     max-width: 340px;
     height: 340px;
+    margin: 0;
     border-radius: $radius-border-cards-img;
     display: flex;
     flex-direction: column;

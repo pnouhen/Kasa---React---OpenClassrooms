@@ -6,7 +6,7 @@
   @include container;
   margin-top: $top-margin;
   height: 415px;
-  border-radius: $radius-border;
+  border-radius: $radius-border-20px;
   @media screen and (max-width: 768px) {
     height: 255px;
   }

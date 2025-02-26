@@ -1,9 +1,12 @@
-import Filter from "../function/Filter";
+import Header from "./Header";
+import Filter from "./Filter";
+import Footer from "./Footer";
 import "../styles/logement.scss";
 import "../styles/filter.scss";
 export default function Logement() {
   return (
     <>
+    <Header />
       <div className="carrousel">
         <img
           id="arrow-left"
@@ -51,6 +54,7 @@ export default function Logement() {
         <Filter title="Description" content="Inserer text"></Filter>
         <Filter title="Equipements" content="Inserer texte"></Filter>
       </section>
+      <Footer />
     </>
   );
 }
