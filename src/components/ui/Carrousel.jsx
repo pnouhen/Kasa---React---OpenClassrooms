@@ -1,48 +1,45 @@
-import { useState } from "react";
-import PropTypes from "prop-types";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import GenerateData from "../services/GenerateData";
+import "./.././../styles/carrousel.scss";
 
-export default function Carousel({ pictures }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  // Fonction pour aller à l'image suivante
-  const goToNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % pictures.length);
-  };
-
-  // Fonction pour aller à l'image précédente
-  const goToPrevious = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + pictures.length) % pictures.length
-    );
-  };
-
+export default function Carrousel() {
+  const { id } = useParams();
+  const [data, setData] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0); 
+  useEffect(() => {
+    if (id) {
+      setData(null);
+    }
+  }, [id]);
   return (
-    <div className="carrousel">
-      {/* Flèche gauche */}
-      <img
-        id="arrow-left"
-        src="../src/assets/logo/arrow-left.png"
-        alt="Arrow left"
-        onClick={goToPrevious} // Quand l'utilisateur clique, va à l'image précédente
-      />
-      
-      {/* Image actuelle du carrousel */}
-      <img
-        id="picture"
-        src={pictures[currentIndex]}
-        alt={`Picture ${currentIndex + 1}`}
-      />
-      
-      {/* Flèche droite */}
-      <img
-        id="arrow-right"
-        src="../src/assets/logo/arrow-right.png"
-        alt="Arrow right"
-        onClick={goToNext} // Quand l'utilisateur clique, va à l'image suivante
-      />
-    </div>
+    <>
+      <GenerateData setData={setData} />
+      {data ? (
+        <div className="carrousel">
+          <img
+            className="arrow-left"
+            src="../src/assets/logo/arrow-left.png"
+            alt="Fleche gauche"
+            onClick={() =>
+                setCurrentIndex((prevIndex) => (prevIndex - 1 + data.pictures.length) % data.pictures.length)} 
+          />
+          <img
+            src={data.pictures[currentIndex]} 
+            alt="Photos du logement"
+          />
+          <img
+            className="arrow-right"
+            src="../src/assets/logo/arrow-right.png"
+            alt="Fleche droite"
+            onClick={() =>
+                setCurrentIndex((prevIndex) => (prevIndex + 1) % data.pictures.length)
+            }
+          />
+        </div>
+      ) : (
+        <div>Chargement...</div>
+      )}
+    </>
   );
-}
-Carousel.propTypes = {
-  pictures: PropTypes.string.isRequired,
 }

@@ -10,7 +10,9 @@ export default function Filter({ title, content }) {
       <div className="name">
         <h2>{title}</h2>
         <i
-          className={open ? "rotate fa-solid fa-chevron-up" : "fa-solid fa-chevron-up"}
+          className={
+            open ? "rotate fa-solid fa-chevron-up" : "fa-solid fa-chevron-up"
+          }
           onClick={() => {
             setOpen(!open);
           }}

@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import GenerateData from "../services/GenerateData";
-import PropTypes from "prop-types";
 import Header from "../Structure/Header.jsx";
+import Carrousel  from "../ui/Carrousel.jsx";
 import Filter from "./../Common/Filter.jsx";
 import Footer from "../Structure/Footer.jsx";
 import "./.././../styles/logement.scss";
@@ -20,8 +20,7 @@ export default function Accommodation() {
   return (
     <>
       <Header />
-      <div className="carrousel"></div>
-      {/* <Carrousel /> */}
+      <Carrousel />
       <GenerateData setData={setData} />
       {data ? (
         <>
@@ -73,28 +72,9 @@ export default function Accommodation() {
           </section>
         </>
       ) : (
-        // <section>
-        //   <h2>{data.title}</h2>
-        //   <p>{data.description}</p>
-        //   <ul>
-        //     <li>
-        //       <strong>Prix:</strong> {data.price} €
-        //     </li>
-        //     <li>
-        //       <strong>Tags:</strong> {data.tags.join(", ")}
-        //     </li>
-        //     <li>
-        //       <strong>Équipements:</strong> {data.equipments.join(", ")}
-        //     </li>
-        //   </ul>
-        // </section>
         <div>Chargement...</div>
       )}
       <Footer />
     </>
   );
 }
-
-Accommodation.propTypes = {
-  setData: PropTypes.func.isRequired,
-};
