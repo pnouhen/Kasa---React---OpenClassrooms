@@ -2,16 +2,17 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import GenerateData from "../services/GenerateData";
 import Header from "../Structure/Header.jsx";
-import Carrousel  from "../ui/Carrousel.jsx";
+import Slideshow from "../ui/Slideshow.jsx";
 import Filter from "./../Common/Filter.jsx";
 import Footer from "../Structure/Footer.jsx";
-import "./.././../styles/logement.scss";
+import "./.././../styles/accommodation.scss";
 
 export default function Accommodation() {
-  // Recuperer l'ID
+  // To recover the ID
   const { id } = useParams();
-  // Etat pour stocker les données
+  // To stockage data of the accommodation
   const [data, setData] = useState(null);
+  // For each change of id
   useEffect(() => {
     if (id) {
       setData(null);
@@ -20,7 +21,7 @@ export default function Accommodation() {
   return (
     <>
       <Header />
-      <Carrousel />
+      <Slideshow />
       <GenerateData setData={setData} />
       {data ? (
         <>

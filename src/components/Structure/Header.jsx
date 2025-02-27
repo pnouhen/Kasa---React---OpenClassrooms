@@ -9,6 +9,7 @@ export default function Header() {
           <li className="accueil">
             <NavLink
               to="/"
+              // isActive for active the border-bottom
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               Accueil

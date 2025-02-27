@@ -37,17 +37,19 @@ section {
       padding: 0;
       gap: 10px;
       li {
-        width: 115px;
+        min-width: 105px;
         height: 25px;
         background: rgba(255, 96, 96, 1);
         border-radius: 10px;
         font-weight: 700;
         font-size: 14px;
+        color: rgb(255, 255, 255);
+        padding: 0 5px 0 5px;
         display: flex;
         justify-content: center;
         align-items: center;
         @media screen and (max-width: 768px) {
-          width: 84px;
+          min-width: 74px;
           height: 18px;
           font-size: 10px;
         }

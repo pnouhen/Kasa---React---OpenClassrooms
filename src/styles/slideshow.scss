@@ -1,7 +1,7 @@
 @import "./variables";
 @import "./mixin";
 
-.carrousel {
+.slideshow {
     position: relative;
     @include container;
     margin-top: $top-margin;

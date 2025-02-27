@@ -47,6 +47,7 @@
   p {
     position: absolute;
     z-index: -1;
+    visibility: hidden;
     opacity: 0;
     transform: translateY(-50px);
     padding: 20px;
@@ -58,9 +59,10 @@
     font-size: 18px;
     text-align: left;
     overflow: hidden;
-    transition: all 400ms ease;
+    transition: transform 400ms ease, visibility 200ms ease, opacity 200ms ease;
     &.open {
       position: relative;
+      visibility: visible;
       transform: translateY(0);
       opacity: 1;
     }

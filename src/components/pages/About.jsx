@@ -2,34 +2,31 @@ import Header from "./../Structure/Header.jsx";
 import Banner from "./../Common/Banner.jsx";
 import Filter from "./../Common/Filter.jsx";
 import Footer from "./../Structure/Footer.jsx";
-import img from "./.././../assets/img/A-Propos.webp";
+import img from "./.././../assets/img/about.webp";
 
 export default function About() {
   return (
     <>
       <Header />
-      <Banner
-        picture={img}
-        descriptionPicture="Bannière de l'A Propos"
-      ></Banner>
+      <Banner picture={img} descriptionPicture="Bannière de l'A Propos" />
       <Filter
         title="Fiabilité"
         content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les
           photos sont conformes aux logements, et toutes les informations sont
           régulièrement vérifiées par nos équipes."
-      ></Filter>
+      />
       <Filter
         title="Respect"
         content="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
           comportement discriminatoire ou de perturbation du voisinage
           entraînera une exclusion de notre plateforme."
-      ></Filter>
+      />
       <Filter
         title="Service"
         content="Nos équipes se tiennent à votre disposition pour vous fournir une
           expérience parfaite. N'hésitez pas à nous contacter si vous avez
           la moindre question."
-      ></Filter>
+      />
       <Filter
         title="Sécurité"
         content="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que
@@ -38,7 +35,7 @@ export default function About() {
           l'hôte qu'au locataire, cela permet à nos équipes de
           vérifier que les standards sont bien respectés. Nous organisons
           également des ateliers sur la sécurité domestique pour nos hôtes."
-      ></Filter>
+      />
       <Footer />
     </>
   );
