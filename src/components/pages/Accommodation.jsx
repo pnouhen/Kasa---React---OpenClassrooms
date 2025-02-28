@@ -4,6 +4,7 @@ import GenerateData from "../services/GenerateData";
 import Header from "../Structure/Header.jsx";
 import Slideshow from "../ui/Slideshow.jsx";
 import Filter from "./../Common/Filter.jsx";
+import Error404 from "./../pages/Error404.jsx";
 import Footer from "../Structure/Footer.jsx";
 import "./.././../styles/accommodation.scss";
 
@@ -20,12 +21,12 @@ export default function Accommodation() {
   }, [id]);
   return (
     <>
-      <Header />
-      <Slideshow />
       <GenerateData setData={setData} />
       {data ? (
         <>
-          <section>
+        <Header />
+      <Slideshow />
+          <section className="section-accommodation">
             <article className="title-tag">
               <h1>{data.title}</h1>
               <p>{data.location}</p>
@@ -71,11 +72,12 @@ export default function Accommodation() {
               ))}
             />{" "}
           </section>
+          <Footer />
         </>
       ) : (
-        <div>Chargement...</div>
+       <Error404></Error404>
       )}
-      <Footer />
+      
     </>
   );
 }

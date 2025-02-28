@@ -16,7 +16,7 @@ export default function Cards() {
           </NavLink>
         ))
       ) : (
-        <div>Chargement...</div>
+        <div className="none">Chargement...</div>
       )}
     </section>
   );

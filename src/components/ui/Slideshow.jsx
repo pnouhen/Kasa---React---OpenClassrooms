@@ -18,7 +18,7 @@ export default function Slideshow() {
       {data ? (
         <div className="slideshow">
           <img
-            className="arrow-left"
+            className={data.pictures.length == 1 ? "arrow-left active" : "arrow-left"}
             src="../src/assets/logo/arrow-left.png"
             alt="Fleche gauche"
             onClick={() =>
@@ -28,8 +28,9 @@ export default function Slideshow() {
             src={data.pictures[currentIndex]} 
             alt="Photos du logement"
           />
+          <span className={data.pictures.length == 1 ? "counter active" : "counter"}>{currentIndex + 1}/{data.pictures.length}</span>
           <img
-            className="arrow-right"
+            className={data.pictures.length == 1 ? "arrow-right active" : "arrow-right"}
             src="../src/assets/logo/arrow-right.png"
             alt="Fleche droite"
             onClick={() =>
@@ -38,7 +39,7 @@ export default function Slideshow() {
           />
         </div>
       ) : (
-        <div>Chargement...</div>
+        <div className="none">Chargement...</div>
       )}
     </>
   );

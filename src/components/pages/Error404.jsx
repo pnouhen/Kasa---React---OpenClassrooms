@@ -11,7 +11,7 @@ export default function Logement() {
       <p className="descriptionError">
         Oups! La page que vous demandez n&apos;existe pas.
       </p>
-      <NavLink to="/Error404">
+      <NavLink to="/">
         Retourner sur la page d’accueil
       </NavLink>
       <Footer />
