@@ -1,23 +1,20 @@
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import GenerateData from "../services/GenerateData";
+import PropTypes from 'prop-types';
 import "./.././../styles/cards.scss";
 
-export default function Cards() {
-  const [data, setData] = useState(null);
+export default function Cards({item}) {
   return (
-    <section className="section-cards">
-      <GenerateData setData={setData} /> 
-      {data ? (
-        data.map((item) => (
           <NavLink to={`/Logement/${item.id}`} key={item.id}>
             <img src={item.cover} alt={item.title} />
             <h2>{item.title}</h2>
           </NavLink>
-        ))
-      ) : (
-        <div className="none">Chargement...</div>
-      )}
-    </section>
+
   );
 }
+Cards.propTypes = {
+  item: PropTypes.shape({
+    id: PropTypes.string.isRequired,  
+    cover: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+  }).isRequired,
+};

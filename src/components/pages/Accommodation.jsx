@@ -25,7 +25,7 @@ export default function Accommodation() {
       {data ? (
         <>
         <Header />
-      <Slideshow />
+      <Slideshow pictures={data.pictures} />
           <section className="section-accommodation">
             <article className="title-tag">
               <h1>{data.title}</h1>
