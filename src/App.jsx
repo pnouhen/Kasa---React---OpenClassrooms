@@ -9,33 +9,25 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <div>
         <Home />
-      </div>
     ),
   },
   {
     path: "/a-propos",
     element: (
-      <div>
         <About />
-      </div>
     ),
   },
   {
     path: "/logement/:id",
     element: (
-      <div>
         <Accommodation />
-      </div>
     ),
   },
   {
     path: "*",
     element: (
-      <div>
         <Error404 />
-      </div>
     ),
   },
 ]);

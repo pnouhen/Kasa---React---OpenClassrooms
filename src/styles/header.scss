@@ -3,7 +3,7 @@
 
 header {
   @include container;
-  margin-top: $top-margin;
+  padding-top: $top-margin;
   display: flex;
   justify-content: space-between;
   align-items: center;
