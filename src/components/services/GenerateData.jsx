@@ -8,7 +8,7 @@ export default function GenerateData({ setData }) {
   const { id } = useParams();
   // To recover the database
   useEffect(() => {
-    fetch("./../public/data/logement.json")
+    fetch("/data/logement.json")
       .then((response) => response.json())
       .then((data) => {
         // To browse the database to recover the accommodation with his id 
