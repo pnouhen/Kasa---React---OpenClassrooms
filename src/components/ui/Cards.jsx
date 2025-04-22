@@ -4,7 +4,7 @@ import "./.././../styles/cards.scss";
 
 export default function Cards({item}) {
   return (
-          <NavLink to={`/Logement/${item.id}`} key={item.id}>
+          <NavLink to={`/logement/${item.id}`} key={item.id}>
             <img src={item.cover} alt={item.title} />
             <h2>{item.title}</h2>
           </NavLink>

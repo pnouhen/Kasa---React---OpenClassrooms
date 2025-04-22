@@ -6,7 +6,7 @@ import "./.././../styles/cards.scss";
 export default function GenerateData({ setData }) { 
   // To select the ID to find out the corresponding accommodation
   const { id } = useParams();
-// To recover the database
+  // To recover the database
   useEffect(() => {
     fetch("./../public/data/logement.json")
       .then((response) => response.json())
@@ -20,9 +20,11 @@ export default function GenerateData({ setData }) {
           setData(data);
         }
       })
-      .catch((error) =>
-        console.error("Erreur lors de la récupération des données :", error)
-      );
+      .catch(() => {
+        // Suppression du console.error pour éviter le message dans la console
+        // On définit simplement les données à null en cas d'erreur
+        setData(null);
+      });
       // Table according to the elements to be modified
   }, [id, setData]); 
 

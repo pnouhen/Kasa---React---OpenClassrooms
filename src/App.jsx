@@ -37,4 +37,3 @@ function App() {
 }
 
 export default App;
-// 404 quand id Logement n'existe pas

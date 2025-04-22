@@ -13,19 +13,35 @@ export default function Accommodation() {
   const { id } = useParams();
   // To stockage data of the accommodation
   const [data, setData] = useState(null);
-  // For each change of id
+  // Pour suivre l'état de chargement
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Pour la mise à jour des données
   useEffect(() => {
     if (id) {
       setData(null);
+      setIsLoading(true);
     }
   }, [id]);
+
+  // Fonction pour marquer la fin du chargement
+  const handleDataLoaded = (loadedData) => {
+    setData(loadedData);
+    setIsLoading(false);
+  };
+
   return (
     <>
-      <GenerateData setData={setData} />
-      {data ? (
+      <GenerateData setData={handleDataLoaded} />
+      
+      {isLoading ? (
+        // Pendant le chargement, on peut afficher un indicateur de chargement ou rien
+          <Header />
+      ) : data ? (
+        // Si les données sont chargées et valides
         <>
-        <Header />
-      <Slideshow pictures={data.pictures} />
+          <Header />
+          <Slideshow pictures={data.pictures} />
           <section className="section-accommodation">
             <article className="title-tag">
               <h1>{data.title}</h1>
@@ -46,7 +62,7 @@ export default function Accommodation() {
                     </span>
                   ))}
                 </div>
-                <img src={data.host.picture}></img>
+                <img src={data.host.picture} alt={data.host.name} />
               </div>
               <div className="rating">
                 {[1, 2, 3, 4, 5].map((starIndex) => (
@@ -70,14 +86,14 @@ export default function Accommodation() {
                   <br />
                 </span>
               ))}
-            />{" "}
+            />
           </section>
           <Footer />
         </>
       ) : (
-       <Error404></Error404>
+        // Si le chargement est terminé mais les données sont nulles = ID invalide
+        <Error404 />
       )}
-      
     </>
   );
 }
