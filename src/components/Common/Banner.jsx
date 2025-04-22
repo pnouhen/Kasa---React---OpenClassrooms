@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import "./.././../styles/banner.scss"
+
 export default function Banner({picture, descriptionPicture, title}) {
   return (
     <div className="title">

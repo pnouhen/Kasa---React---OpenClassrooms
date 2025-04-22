@@ -5,6 +5,7 @@ import GenerateData from "../services/GenerateData";
 import Footer from "../Structure/Footer.jsx";
 import Cards from "../ui/Cards.jsx"
 import img from "./.././../assets/img/home.webp";
+
 export default function Home() {
   const [data, setData] = useState(null);
   return (

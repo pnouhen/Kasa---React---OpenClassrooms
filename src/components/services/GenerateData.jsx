@@ -21,7 +21,6 @@ export default function GenerateData({ setData }) {
         }
       })
       .catch(() => {
-        // Suppression du console.error pour éviter le message dans la console
         // On définit simplement les données à null en cas d'erreur
         setData(null);
       });

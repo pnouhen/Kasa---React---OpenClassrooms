@@ -16,7 +16,7 @@ export default function Accommodation() {
   // Pour suivre l'état de chargement
   const [isLoading, setIsLoading] = useState(true);
 
-  // Pour la mise à jour des données
+  // Pour la mise à jour des données à chaque fois que l'Id change
   useEffect(() => {
     if (id) {
       setData(null);
@@ -24,7 +24,7 @@ export default function Accommodation() {
     }
   }, [id]);
 
-  // Fonction pour marquer la fin du chargement
+  // Met à jour data et indique que le chargement est terminé.
   const handleDataLoaded = (loadedData) => {
     setData(loadedData);
     setIsLoading(false);
@@ -32,11 +32,12 @@ export default function Accommodation() {
 
   return (
     <>
+    {/* Récuperer les données pour les placés dans data */}
       <GenerateData setData={handleDataLoaded} />
       
+      {/* Obliger de faire les deux pour éviter que Error404 s'affiche plusieurs fois */}
       {isLoading ? (
-        // Pendant le chargement, on peut afficher un indicateur de chargement ou rien
-          <Header />
+          <p></p>
       ) : data ? (
         // Si les données sont chargées et valides
         <>
@@ -46,7 +47,7 @@ export default function Accommodation() {
             <article className="title-tag">
               <h1>{data.title}</h1>
               <p>{data.location}</p>
-              <ul>
+              <ul className="location">
                 {data.tags.map((tags, index) => (
                   <li key={index}>{tags}</li>
                 ))}
@@ -90,8 +91,7 @@ export default function Accommodation() {
           </section>
           <Footer />
         </>
-      ) : (
-        // Si le chargement est terminé mais les données sont nulles = ID invalide
+      ) : (       
         <Error404 />
       )}
     </>
