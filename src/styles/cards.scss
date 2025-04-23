@@ -8,8 +8,8 @@
   margin-top: $top-margin;
   background: rgba(246, 246, 246, 1);
   border-radius: $radius-border-20px;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
   gap: 45px;
   padding: 45px;
   @media screen and (max-width: 1024px) {
@@ -20,7 +20,6 @@
   a {
     flex-grow: 1;
     position: relative;
-    width: 30%;
     height: 340px;
     margin: 0;
     border-radius: $radius-border-cards-img;
