@@ -1,5 +1,5 @@
-@import "./variables";
-@import "./mixin";
+@import "../../styles/variables";
+@import "../../styles/mixin";
 
 header {
   @include container;

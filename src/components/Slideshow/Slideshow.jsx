@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PropTypes from 'prop-types';
-import "./.././../styles/slideshow.scss";
+import "./slideshow.scss";
 
 export default function Slideshow({ pictures }) {
   const [currentIndex, setCurrentIndex] = useState(0); 

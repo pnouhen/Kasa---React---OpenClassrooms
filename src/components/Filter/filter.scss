@@ -1,5 +1,5 @@
-@import "./mixin";
-@import "./variables";
+@import "../../styles/variables";
+@import "../../styles/mixin";
 
 .filter {
   @include container;

@@ -1,0 +1,21 @@
+.ratings {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 13px;
+    @media screen and (max-width: 768px) {
+      margin-top: 0;
+      order: -1;
+      gap: 8px;
+    }
+    .fa-star {
+      font-size: 24px;
+      color: rgba(227, 227, 227, 1);
+      @media screen and (max-width: 768px) {
+        font-size: 13px;
+      }
+    }
+    .fa-star.active{
+      color: rgba(255, 96, 96, 1);
+    }
+  }

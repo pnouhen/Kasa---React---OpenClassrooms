@@ -1,0 +1,10 @@
+.name {
+    margin: 0;
+    font-weight: 500;
+    font-size: 18px;
+    color: rgba(255, 96, 96, 1);
+    text-align: end;
+    @media screen and (max-width: 768px) {
+        font-size: 12px;
+      }
+  }

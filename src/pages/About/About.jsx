@@ -1,8 +1,8 @@
-import Header from "./../Structure/Header.jsx";
-import Banner from "./../Common/Banner.jsx";
-import Filter from "./../Common/Filter.jsx";
-import Footer from "./../Structure/Footer.jsx";
-import img from "./.././../assets/img/about.webp";
+import Header from "../../components/Header/Header.jsx";
+import Banner from "../../components/Banner/Banner.jsx";
+import Filter from "../../components/Filter/Filter.jsx";
+import Footer from "../../components/Footer/Footer.jsx";
+import img from "../../assets/img/about.webp";
 
 export default function About() {
   return (

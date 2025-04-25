@@ -1,9 +1,10 @@
-import "./styles/body.scss";
-import Home from "./components/pages/Home.jsx";
-import About from "./components/pages/About.jsx";
-import Error404 from "./components/pages/Error404.jsx";
-import Accommodation from "./components/pages/Accommodation.jsx";
+import Home from "./pages/Home"
+import About from "./pages/About/About" 
+import Accommodation from "./pages/Accommodation/Accommodation"
+import Error404 from "./pages/Error404/Error404"
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import "./styles/general.scss";
 
 const router = createBrowserRouter([
   {

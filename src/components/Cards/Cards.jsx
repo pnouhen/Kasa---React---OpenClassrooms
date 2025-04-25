@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import PropTypes from 'prop-types';
-import "./.././../styles/cards.scss";
+import "./cards.scss";
 
 export default function Cards({item}) {
   return (

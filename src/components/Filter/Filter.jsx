@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import "./.././../styles/filter.scss";
+import "./filter.scss";
 
 export default function Filter({ title, content }) {
   const [open, setOpen] = useState(false);
