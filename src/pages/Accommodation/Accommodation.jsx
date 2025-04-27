@@ -7,7 +7,7 @@ import Tags from "../../components/Tags/Tags.jsx";
 import Name from "../../components/Name/Name.jsx";
 import Filter from "../../components/Filter/Filter.jsx";
 import Ratings from "../../components/Ratings/Ratings.jsx";
-import Error404 from "../Error404/Error404.jsx";  
+import Error404 from "../Error404/Error404.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
 import "./accommodation.scss";
 
@@ -19,7 +19,7 @@ export default function Accommodation() {
   useEffect(() => {
     fetchData()
       .then((data) => {
-        const accommodation = data.find(item => item.id === id); 
+        const accommodation = data.find((item) => item.id === id);
         if (accommodation) {
           setData(accommodation);
         } else {
@@ -30,7 +30,9 @@ export default function Accommodation() {
       .finally(() => setLoading(false));
   }, [id]);
 
-  if (loading) return <p>Chargement...</p>;
+  if (loading) {
+    return <p>Chargement...</p>;
+  }
 
   if (!data) {
     return <Error404 />;
